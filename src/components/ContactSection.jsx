@@ -1,5 +1,5 @@
 import React from "react";
-import contactus from "../assets/images/ContactUs.webp";
+import contactus from "../assets/images/contactUs.webp";
 import HighlightText from "../global/HighlightText";
 import Button from "../global/Button";
 import { Link } from "react-router-dom";
