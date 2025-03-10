@@ -12,7 +12,7 @@ const ContactUs = () => {
     <div>
       <Header />
       <HeroSection
-        className={"flex items-center justify-center gap-4 flex-col"}
+        className={"flex items-center pt-20 md:pt-0 justify-center gap-4 flex-col"}
         heroBg={contact_bg}
         heading={
           <HighlightText

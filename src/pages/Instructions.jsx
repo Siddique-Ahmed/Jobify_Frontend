@@ -12,7 +12,7 @@ const Instructions = () => {
       <Header />
       <HeroSection
         heroBg={instruction_bg}
-        className={"flex items-center flex-col gap-5"}
+        className={"flex items-center pt-20 md:pt-0 flex-col gap-5"}
         heading={
           <HighlightText
             text={" Find & Apply for Your Dream Job!"}

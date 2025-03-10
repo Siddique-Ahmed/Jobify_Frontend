@@ -6,6 +6,7 @@ import Faq from "./pages/Faq";
 import ScrollToTop from "./utilities/ScrollOnTop";
 import Instructions from "./pages/Instructions";
 import Reviews from "./pages/Reviews";
+import Benefit from "./pages/Benefit";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/faqs" element={<Faq />} />
         <Route path="/instruction" element={<Instructions />} />
         <Route path="/reviews" element={<Reviews />} />
+        <Route path="/benefits" element={<Benefit />} />
       </Routes>
     </BrowserRouter>
   );
