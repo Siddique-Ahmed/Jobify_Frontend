@@ -20,7 +20,7 @@ const navigationLinks = [
   {
     title: "Companies",
     icon: <FaBuildingUser size={15} />,
-    link: "/companies",
+    link: "/company",
   },
   {
     title: "Jobs",
@@ -55,7 +55,7 @@ const userProfileDropDown = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showDropDown, setShowDropDown] = useState(false);
-  const auth = true;
+  const auth = false;
   return (
     <div className="w-full z-50 min-h-[50px] bg-gray-100 py-3 shadow-md fixed top-0 left-0">
       <div className="container mx-auto h-full flex items-center gap-2 justify-between px-3 sm:px-10 relative">
@@ -155,6 +155,7 @@ const Header = () => {
               <Link to="/login">
                 <Button
                   text={"Login"}
+                  isText={true}
                   className={
                     "p-2 px-4 rounded-md border border-[var(--dark-bg)] font-semibold bg-[var(--dark-bg)] hover:text-[var(--dark-bg)] hover:bg-transparent text-[var(--text-white)]"
                   }
@@ -163,6 +164,7 @@ const Header = () => {
               <Link to="/signup">
                 <Button
                   text={"Signup"}
+                  isText={true}
                   className={
                     "p-2 px-4 rounded-md border border-[var(--dark-bg)] font-semibold bg-transparent hover:text-[var(--text-white)] hover:bg-[var(--dark-bg)] text-[var(--dark-bg)]"
                   }
