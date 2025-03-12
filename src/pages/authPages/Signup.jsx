@@ -10,7 +10,7 @@ const Signup = () => {
   return (
     <div className="w-full min-h-screen flex items-center">
       {/* Form Side */}
-      <div className="w-full lg:w-1/4 flex items-center gap-3 px-4 py-10 lg:px-2 lg:py-2 flex-col bg-gray-100 min-h-screen overflow-y-auto hide-scrollbar">
+      <div className="w-full lg:w-1/4 flex items-center gap-3 px-5 py-10 flex-col bg-gray-100 min-h-screen overflow-y-auto hide-scrollbar">
         <div className="w-full flex items-center justify-center">
           <h1 className="text-3xl uppercase font-bold">
             <HighlightText

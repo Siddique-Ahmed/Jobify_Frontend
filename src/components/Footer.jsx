@@ -1,27 +1,33 @@
-import { FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaInstagram,
+  FaYoutube,
+  FaGithub,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import HighlightText from "../global/HighlightText";
 
 const socialLinks = [
   {
-    icon: <FaFacebook size={30} />,
-    link: "https://www.facebook.com/jobifyapp",
-    className: "text-blue-600 text-2xl cursor-pointer",
+    icon: <FaGithub size={30} />,
+    link: "https://www.github.com/Siddique-Ahmed",
+    className: "text-gray-500 text-2xl cursor-pointer hover:text-white",
   },
   {
     icon: <FaLinkedin size={30} />,
-    link: "https://www.linkedin.com/company/jobifyapp",
-    className: "text-blue-500 text-2xl cursor-pointer",
+    link: "https://www.linkedin.com/in/siddique-ahmed-8a3009297/",
+    className: "text-blue-500 text-2xl cursor-pointer hover:text-blue-600",
   },
   {
     icon: <FaInstagram size={30} />,
-    link: "https://www.instagram.com/jobifyapp",
-    className: "text-pink-500 text-2xl cursor-pointer",
+    link: "https://www.instagram.com/codewithfun764/",
+    className: "text-pink-500 text-2xl cursor-pointer hover:text-pink-600",
   },
   {
     icon: <FaYoutube size={30} />,
-    link: "https://www.youtube.com/channel/UCt9E9v5z-Q56-q7b0614KQ1w",
-    className: "text-red-600 text-2xl cursor-pointer",
+    link: "https://www.youtube.com/@Codewithfun07",
+    className: "text-red-600 text-2xl cursor-pointer hover:text-red-500",
   },
 ];
 
@@ -37,8 +43,8 @@ const productLinks = [
 ];
 const information = [
   {
-    text: "Company",
-    link: "/company",
+    text: "Browse",
+    link: "/browse",
   },
   {
     text: "Jobs",
@@ -79,7 +85,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-3 mt-4">
               {socialLinks.map((link, ind) => (
-                <Link key={ind} to={link.link} className={link.className}>
+                <Link key={ind} target="blank" to={link.link} className={link.className}>
                   {link.icon}
                 </Link>
               ))}

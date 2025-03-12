@@ -18,9 +18,9 @@ const navigationLinks = [
     link: "/",
   },
   {
-    title: "Companies",
+    title: "Saved Jobs",
     icon: <FaBuildingUser size={15} />,
-    link: "/company",
+    link: "/saved-jobs",
   },
   {
     title: "Jobs",
@@ -55,7 +55,7 @@ const userProfileDropDown = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showDropDown, setShowDropDown] = useState(false);
-  const auth = false;
+  const auth = true;
   return (
     <div className="w-full z-50 min-h-[50px] bg-gray-100 py-3 shadow-md fixed top-0 left-0">
       <div className="container mx-auto h-full flex items-center gap-2 justify-between px-3 sm:px-10 relative">
