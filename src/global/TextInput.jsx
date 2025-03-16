@@ -1,6 +1,6 @@
 import React from "react";
 
-const Input = ({
+const TextInput = ({
   labelText,
   clasName,
   labelClass,
@@ -11,20 +11,26 @@ const Input = ({
   icon,
   iconPosition = "left",
   inputType = "text",
+  inputName,
 }) => {
   return (
     <div className={`${clasName}`}>
-      {isLabel ? <label className={`${labelClass}`}>{labelText}</label> : null}
+      {isLabel ? (
+        <label htmlFor={inputName} className={`${labelClass}`}>
+          {labelText}
+        </label>
+      ) : null}
       {icon && iconPosition == "left" ? <span>{icon}</span> : null}
       <input
         onChange={inputFunction}
         type={inputType}
         className={`${inputClass}`}
         placeholder={placeHolder}
+        name={inputName}
       />
       {icon && iconPosition == "right" ? <span>{icon}</span> : null}
     </div>
   );
 };
 
-export default Input;
+export default TextInput;

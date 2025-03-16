@@ -163,12 +163,12 @@ const jobListings = [
 const Jobs = () => {
   const [isOpen, setIsOpen] = useState(true);
   return (
-    <div>
+    <div className="min-h-screen ">
       <Header />
       <div className="w-full min-h-screen flex items-center">
         {/* aside search bar for jobs */}
         <AsideBar
-          className={`hidden md:block ${isOpen ? "w-1/4" : "w-[70px]"} shadow-lg pt-20 min-h-screen`}
+          className={`hidden md:block ${isOpen ? "w-1/4" : "w-[70px]"} overflow-auto hide-scrollbar shadow-lg pt-20 py-8 h-screen`}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
         />

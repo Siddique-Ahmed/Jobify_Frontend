@@ -11,6 +11,10 @@ import Jobs from "./pages/Jobs";
 import Login from "./pages/authPages/Login";
 import Signup from "./pages/authPages/Signup";
 import SavedJobs from "./pages/SavedJobs";
+import AppliedJobs from "./pages/AppliedJobs";
+import Settings from "./pages/Settings";
+import Profile from "./pages/Profile";
+import ProfileUpdate from "./pages/ProfileUpdate";
 
 const App = () => {
   return (
@@ -27,6 +31,10 @@ const App = () => {
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/apply-jobs" element={<AppliedJobs />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/update/:id" element={<ProfileUpdate />} />
       </Routes>
     </BrowserRouter>
   );

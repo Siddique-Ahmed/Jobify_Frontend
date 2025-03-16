@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "../global/Input";
+import TextInput from "../global/TextInput";
 import { Link } from "react-router-dom";
 import Button from "../global/Button";
 
@@ -9,7 +9,7 @@ const SignupForm = () => {
       onSubmit={(e) => e.preventDefault()}
       className="w-full sm:w-[430px] lg:w-full flex flex-col items-center justify-center"
     >
-      <Input
+      <TextInput
         clasName={"w-full flex flex-col gap-2 mt-2"}
         inputClass={"w-full px-2 py-2 rounded-md bg-white outline-none"}
         labelText={"Full Name"}
@@ -17,7 +17,7 @@ const SignupForm = () => {
         isLabel={true}
         inputFunction={() => console.log("input")}
       />
-      <Input
+      <TextInput
         clasName={"w-full flex flex-col gap-2 mt-2"}
         inputClass={"w-full px-2 py-2 rounded-md bg-white outline-none"}
         labelText={"username"}
@@ -25,7 +25,7 @@ const SignupForm = () => {
         isLabel={true}
         inputFunction={() => console.log("input")}
       />
-      <Input
+      <TextInput
         clasName={"w-full flex flex-col gap-2 mt-2"}
         inputClass={"w-full px-2 py-2 rounded-md bg-white outline-none"}
         labelText={"Email"}
@@ -33,7 +33,7 @@ const SignupForm = () => {
         isLabel={true}
         inputFunction={() => console.log("input")}
       />
-      <Input
+      <TextInput
         clasName={"w-full flex flex-col gap-2 mt-2"}
         inputClass={"w-full px-2 py-2 rounded-md bg-white outline-none"}
         labelText={"password"}

@@ -1,6 +1,6 @@
 import React from "react";
 import JobCard from "./JobCard";
-import Input from "../global/Input";
+import Input from "../global/TextInput";
 import { FaSearch } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 

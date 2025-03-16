@@ -3,6 +3,39 @@ import HighlightText from "../global/HighlightText";
 import Button from "../global/Button";
 import { FaBars, FaCaretDown, FaCaretRight, FaXmark } from "react-icons/fa6";
 
+const cities = ["Karachi", "Lahore", "Peshawar", "Islamabad", "hyderabad"];
+const salaries = [
+  "20k to 30k",
+  "31k to 40k",
+  "41k to 50k",
+  "51k to 60k",
+  "61k to 70k",
+  "71K to 80k",
+];
+const companies = [
+  "JYtech pvt ltd",
+  "Hiring mine",
+  "Job search agency",
+  "Jobify",
+  "Jobseeker",
+  "Job board",
+  "Job portal",
+];
+const positions = [
+  "Full Stack Developer",
+  "Senior Developer",
+  "Junior Developer",
+  "Product Manager",
+  "UX/UI Designer",
+  "Frontend Developer",
+  "Backend Developer",
+  "Data Analyst",
+  "Project Manager",
+  "QA/Tester",
+  "Content Writer",
+  "Business Analyst",
+];
+
 const AsideBar = ({ className, isOpen, setIsOpen }) => {
   const [company, setCompany] = useState(false);
   const [position, setPosition] = useState(false);
@@ -44,7 +77,21 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
           }
           onClick={() => setCompany(!company)}
         />
-        {company && <div>company</div>}
+        {company && (
+          <div className="px-3">
+            <ul className="flex flex-col gap-2">
+              {companies.map((company, ind) => (
+                <li
+                  className="text-gray-700 flex items-center gap-2 hover:text-[var(--dark-bg)]"
+                  key={ind}
+                >
+                  <input type="checkbox" name={company} id="" />
+                  <label htmlFor={company}>{company}</label>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       <div className={`${isOpen ? "block" : "hidden"} w-full`}>
         <Button
@@ -60,7 +107,21 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
           }
           onClick={() => setPosition(!position)}
         />
-        {position && <div>Position</div>}
+        {position && (
+          <div className="px-3">
+            <ul className="flex flex-col gap-2">
+              {positions.map((position, ind) => (
+                <li
+                  className="text-gray-700 flex items-center gap-2 hover:text-[var(--dark-bg)]"
+                  key={ind}
+                >
+                  <input type="checkbox" name={position} />
+                  <label htmlFor={position}>{position}</label>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       <div className={`${isOpen ? "block" : "hidden"} w-full`}>
         <Button
@@ -74,7 +135,21 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
           }
           onClick={() => setSalary(!salary)}
         />
-        {salary && <div>Salary</div>}
+        {salary && (
+          <div className="px-3">
+            <ul className="flex flex-col gap-2">
+              {salaries.map((salary, ind) => (
+                <li
+                  className="text-gray-700 flex items-center gap-2 hover:text-[var(--dark-bg)]"
+                  key={ind}
+                >
+                  <input type="checkbox" name={salary} />
+                  <label htmlFor={salary}>{salary}</label>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       <div className={`${isOpen ? "block" : "hidden"} w-full`}>
         <Button
@@ -88,11 +163,21 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
           }
           onClick={() => setCity(!city)}
         />
-                {
-          city &&(
-            <div>city</div>
-          )
-        }
+        {city && (
+          <div className="px-3">
+            <ul className="flex flex-col gap-2">
+              {cities.map((city, ind) => (
+                <li
+                  className="text-gray-700 flex items-center gap-2 hover:text-[var(--dark-bg)]"
+                  key={ind}
+                >
+                  <input type="checkbox" name={city} />
+                  <label htmlFor={city}>{city}</label>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

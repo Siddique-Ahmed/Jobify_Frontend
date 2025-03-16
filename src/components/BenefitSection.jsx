@@ -34,7 +34,7 @@ const benefits = [
 const BenefitSection = () => {
   return (
     <div className="w-full flex items-center flex-col gap-3 py-12 justify-center p-4 min-h-[30vh] bg-gray-200">
-      <h1 className="text-3xl font-semibold">
+      <h1 className="text-3xl text-center font-semibold">
         <HighlightText
           text={"What you have Benefits?"}
           color="var(--dark-bg)"

@@ -34,7 +34,7 @@ const Signup = () => {
             text={"Google"}
             isText={true}
             className={
-              "w-full sm:w-[190px] flex items-center lg:w-full bg-[var(--dark-bg)] p-2 rounded-sm text-gray-100 hover:opacity-88"
+              "w-full sm:w-[190px] flex items-center lg:w-full bg-[var(--dark-bg)] p-2 rounded-sm text-gray-100 text-sm font-semibold hover:opacity-88"
             }
             isImage={true}
             imgPosition="left"
@@ -45,7 +45,7 @@ const Signup = () => {
             text={"Facebook"}
             isText={true}
             className={
-              "w-full sm:w-[190px] flex items-center lg:w-full bg-transparent p-2 rounded-sm text-[var(--dark-bg)] border border-[var(--dark-bg)] hover:text-gray-100 hover:bg-[var(--dark-bg)]"
+              "w-full sm:w-[190px] flex items-center lg:w-full bg-transparent p-2 rounded-sm text-[var(--dark-bg)] text-sm font-semibold border border-[var(--dark-bg)] hover:text-gray-100 hover:bg-[var(--dark-bg)]"
             }
             isImage={true}
             imgPosition="left"

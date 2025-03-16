@@ -44,7 +44,7 @@ const productLinks = [
 const information = [
   {
     text: "Browse",
-    link: "/browse",
+    link: "/saved-jobs",
   },
   {
     text: "Jobs",
