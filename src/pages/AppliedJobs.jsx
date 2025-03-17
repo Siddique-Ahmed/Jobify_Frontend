@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MainContent from "../components/MainContent";
+import AppliedJobsContent from "./AppliedJobsContent";
 
 const jobListings = [
   {
@@ -63,12 +64,7 @@ const AppliedJobs = () => {
   return (
     <div>
       <Header />
-      <MainContent
-        className={
-          "w-full bg-gray-100 pt-20 py-5 min-h-screen md:h-screen md:overflow-y-auto hide-scrollbar"
-        }
-        data={jobListings}
-      />
+      <AppliedJobsContent/>
       <Footer />
     </div>
   );
