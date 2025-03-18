@@ -15,6 +15,9 @@ import AppliedJobs from "./pages/AppliedJobs";
 import Settings from "./pages/Settings";
 import Profile from "./pages/Profile";
 import ProfileUpdate from "./pages/ProfileUpdate";
+import ForgetPassword from "./pages/authPages/ForgetPassword";
+import ResetPassword from "./pages/authPages/ResetPassword";
+import JobDetail from "./pages/JobDetail";
 
 const App = () => {
   return (
@@ -29,8 +32,11 @@ const App = () => {
         <Route path="/benefits" element={<Benefit />} />
         <Route path="/saved-jobs" element={<SavedJobs />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/job-detail/:id" element={<JobDetail />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/forget-password" element={<ForgetPassword />} />
+        <Route path="/reset-password/:id/:token" element={<ResetPassword />} />
         <Route path="/apply-jobs" element={<AppliedJobs />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/profile" element={<Profile />} />

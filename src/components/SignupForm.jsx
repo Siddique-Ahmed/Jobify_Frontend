@@ -42,17 +42,6 @@ const SignupForm = () => {
         isLabel={true}
         inputFunction={() => console.log("input")}
       />
-      <div className="py-2 w-full flex flex-col gap-2">
-        <div>
-          <span>Remember Me</span>
-        </div>
-        <Link
-          to={"/#"}
-          className="text-[var(--dark-bg)] font-semibold text-end"
-        >
-          Forgot Password?
-        </Link>
-      </div>
       <div className="w-full py-3">
         <Button
           text={"Signup"}
