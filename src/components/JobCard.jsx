@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../global/Button";
 import { FaBookmark, FaRegBookmark } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const JobCard = ({ data }) => {
   const [saved, setSaved] = useState(false);
@@ -55,13 +56,13 @@ const JobCard = ({ data }) => {
         />
       </div>
       <div className="py-2">
-        <Button
+       <Link to={`/job-detail/2`}> <Button
           isText={true}
           text={"Detail"}
           className={
             "w-[120px] md:w-[80px] px-4 py-2 hover:shadow-md border border-gray-300 rounded-md"
           }
-        />
+        /></Link>
       </div>
     </div>
   );
