@@ -18,7 +18,7 @@ const Faq = () => {
           "w-full md:w-[90%] text-center text-gray-100 font-normal text-sm md:text-md"
         }
         headingClass={
-          "text-center text-gray-100 font-normal text-2xl md:text-4xl"
+          "text-center !text-gray-100 font-normal text-2xl md:text-4xl"
         }
         heading={
           <HighlightText

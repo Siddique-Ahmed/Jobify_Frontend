@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const ContactSection = () => {
   return (
     <div className="w-full min-h-[140px] px-4 py-12 bg-gray-100">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:py-8 bg-gray-100">
+      <div className="!container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:py-8 bg-gray-100">
         {/* Left Side - Image */}
         <div className="flex justify-center">
           <img

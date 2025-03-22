@@ -12,22 +12,22 @@ const socialLinks = [
   {
     icon: <FaGithub size={30} />,
     link: "https://www.github.com/Siddique-Ahmed",
-    className: "text-gray-500 text-2xl cursor-pointer hover:text-white",
+    className: "!text-gray-500 text-2xl cursor-pointer hover:!text-white",
   },
   {
     icon: <FaLinkedin size={30} />,
     link: "https://www.linkedin.com/in/siddique-ahmed-8a3009297/",
-    className: "text-blue-500 text-2xl cursor-pointer hover:text-blue-600",
+    className: "!text-blue-500 text-2xl cursor-pointer hover:!text-blue-600",
   },
   {
     icon: <FaInstagram size={30} />,
     link: "https://www.instagram.com/codewithfun764/",
-    className: "text-pink-500 text-2xl cursor-pointer hover:text-pink-600",
+    className: "!text-pink-500 text-2xl cursor-pointer hover:!text-pink-600",
   },
   {
     icon: <FaYoutube size={30} />,
     link: "https://www.youtube.com/@Codewithfun07",
-    className: "text-red-600 text-2xl cursor-pointer hover:text-red-500",
+    className: "!text-red-600 text-2xl cursor-pointer hover:!text-red-500",
   },
 ];
 
@@ -69,7 +69,7 @@ const support = [
 const Footer = () => {
   return (
     <footer className="w-full bg-gray-900 text-white py-10 px-5">
-      <div className="container mx-auto">
+      <div className="!container mx-auto">
         <div className=" grid md:grid-cols-4 gap-6">
           {/* Company Info */}
           <div>
@@ -95,10 +95,10 @@ const Footer = () => {
           {/* Product Section */}
           <div>
             <h3 className="text-lg font-semibold">Product</h3>
-            <ul className="text-sm text-gray-400 space-y-2 mt-2">
+            <ul className="text-sm !pl-0 !text-gray-400 space-y-2 mt-2">
               {productLinks.map((link, ind) => (
                 <li key={ind}>
-                  <Link to={link.link} className="hover:text-gray-100">
+                  <Link to={link.link} className="!text-gray-300 hover:!text-gray-100 !no-underline">
                     {link.text}
                   </Link>
                 </li>
@@ -109,10 +109,10 @@ const Footer = () => {
           {/* Information Section */}
           <div>
             <h3 className="text-lg font-semibold">Information</h3>
-            <ul className="text-sm text-gray-400 space-y-2 mt-2">
+            <ul className="text-sm !pl-0 !text-gray-400 space-y-2 mt-2">
               {information.map((link, ind) => (
                 <li key={ind}>
-                  <Link to={link.link} className="hover:text-gray-100">
+                  <Link to={link.link} className="!text-gray-300 hover:!text-gray-100 !no-underline">
                     {link.text}
                   </Link>
                 </li>
@@ -123,10 +123,10 @@ const Footer = () => {
           {/* Support Section */}
           <div>
             <h3 className="text-lg font-semibold">Support</h3>
-            <ul className="text-sm text-gray-400 space-y-2 mt-2">
+            <ul className="text-sm !pl-0 text-gray-400 space-y-2 mt-2">
               {support.map((link, ind) => (
                 <li key={ind}>
-                  <Link to={link.link} className="hover:text-gray-100">
+                  <Link to={link.link} className="!text-gray-300 hover:!text-gray-100 !no-underline">
                     {link.text}
                   </Link>
                 </li>

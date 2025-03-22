@@ -7,7 +7,7 @@ import HighlightText from "../global/HighlightText";
 const Content = () => {
   return (
     <div className="w-full min-h-[140px] px-4 py-12 bg-gray-100">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:py-8 bg-gray-100">
+      <div className="!container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:py-8 bg-gray-100">
         {/* Left Side - Content */}
         <div className="flex flex-col justify-center">
           <h1 className="text-2xl md:text-4xl text-center md:text-start font-bold text-gray-800 mb-4">
@@ -25,11 +25,11 @@ const Content = () => {
           </p>
           <Link
             to="#"
-            className="text-[var(--dark-bg)] font-semibold hover:underline flex items-center"
+            className="!text-[var(--dark-bg)] !no-underline font-semibold hover:underline flex !items-center"
           >
             Learn More{" "}
             <span className="ml-2">
-              <FaArrowRight />
+              <FaArrowRight/>
             </span>
           </Link>
         </div>

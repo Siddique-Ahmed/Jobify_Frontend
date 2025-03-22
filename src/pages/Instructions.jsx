@@ -24,10 +24,10 @@ const Instructions = () => {
           "Our job portal makes it easy to search for the best opportunities and apply with ease. Connect directly with recruiters, upload your resume, and take your career to the next level!"
         }
         headingClass={
-          "text-gray-100 font-bold text-2xl md:text-4xl text-center"
+          "!text-gray-100 font-bold text-2xl md:text-4xl text-center"
         }
         paraClass={
-          "text-gray-100 font-bold text-md w-[90%] md:text-xl text-center"
+          "!text-gray-100 font-bold text-md w-[90%] md:text-xl text-center"
         }
       />
       <InstructionContent />

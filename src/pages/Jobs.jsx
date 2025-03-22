@@ -168,14 +168,14 @@ const Jobs = () => {
       <div className="w-full min-h-screen flex items-center">
         {/* aside search bar for jobs */}
         <AsideBar
-          className={`hidden md:block ${isOpen ? "w-1/4" : "w-[70px]"} overflow-auto hide-scrollbar shadow-lg pt-20 py-8 h-screen`}
+          className={`hidden md:block ${isOpen ? "w-1/4" : "w-[70px]"} overflow-auto hide-scrollbar !shadow-lg !pt-20 !py-8 h-screen`}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
         />
         {/* company logo and details */}
         <MainContent
           className={
-            "w-full bg-gray-100 pt-20 py-5 min-h-screen md:h-screen md:overflow-y-auto hide-scrollbar"
+            "w-full !bg-gray-100 !pt-20 !py-5 min-h-screen md:h-screen md:overflow-y-auto hide-scrollbar"
           }
           data={jobListings}
         />

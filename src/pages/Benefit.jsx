@@ -23,10 +23,10 @@ const Benefit = () => {
           "At Jobify, career growth insights, and exclusive perks designed to help you land your ideal job with ease."
         }
         className={
-          "container mx-auto w-[90%] pt-16 md:pt-0 flex flex-col items-center gap-4 text-center"
+          "!container mx-auto w-[90%] pt-16 md:pt-0 flex flex-col items-center gap-4 text-center"
         }
-        headingClass={"text-2xl md:text-4xl text-gray-100 font-bold"}
-        paraClass={"text-lg md:text-xl text-gray-100 font-medium"}
+        headingClass={"text-2xl md:text-4xl !text-gray-100 font-bold"}
+        paraClass={"text-lg md:text-xl !text-gray-100 font-medium"}
       />
       <BenefitSection />
       <Footer />

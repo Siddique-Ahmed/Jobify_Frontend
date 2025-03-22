@@ -22,7 +22,7 @@ const ContactUs = () => {
           />
         }
         headingClass={
-          "text-2xl md:text-4xl font-bold text-gray-100 text-center"
+          "text-2xl md:text-4xl font-bold !text-gray-100 text-center"
         }
         para={
           "Have a question or need support? Whether you're looking for your dream job or searching for the perfect candidate, Jobify is here to assist you. Reach out to us, and let's make job searching and hiring easier together!"

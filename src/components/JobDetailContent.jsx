@@ -5,7 +5,7 @@ import { FaBookmark, FaRegBookmark } from "react-icons/fa6";
 const JobDetailContent = () => {
   return (
     <div className="w-full min-h-screen pt-18 sm:px-4">
-      <div className="container mx-auto px-4 py-3">
+      <div className="!container mx-auto px-4 py-3">
         {/* job Detail content */}
         <div className="w-full flex gap-4 flex-col">
           {/* first side */}

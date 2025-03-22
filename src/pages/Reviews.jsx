@@ -23,7 +23,7 @@ const Reviews = () => {
           "At Jobify, we take pride in helping job seekers find their dream jobs and recruiters hire top talent effortlessly.Join thousands of professionals who trust Jobify to build their careers and grow their teams."
         }
         headingClass={
-          "text-gray-100 font-bold text-2xl pt-20 md:pt-0 md:text-4xl text-center"
+          "!text-gray-100 font-bold text-2xl pt-20 md:pt-0 md:text-4xl text-center"
         }
         paraClass={
           "text-gray-100 font-bold text-md w-[90%] md:text-xl text-center"

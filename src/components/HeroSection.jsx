@@ -22,7 +22,7 @@ const HeroSection = ({
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className={`${className} container mx-auto`}>
+      <div className={`${className} !container mx-auto`}>
         <h1 className={`${headingClass}`}>{heading}</h1>
         <p className={`${paraClass}`}>{para}</p>
       </div>

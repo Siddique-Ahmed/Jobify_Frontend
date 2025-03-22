@@ -36,7 +36,7 @@ const Home = () => {
           " flex items-center justify-center flex-col gap-2 pt-[80px] sm:pt-20"
         }
         headingClass={
-          "text-2xl md:text-3xl md:text-4xl text-gray-100 font-bold text-center"
+          "text-2xl md:text-3xl md:text-4xl !text-gray-100 font-bold text-center"
         }
         paraClass={
           "w-full md:w-[80%] text-sm md:text-lg  text-center text-gray-200"

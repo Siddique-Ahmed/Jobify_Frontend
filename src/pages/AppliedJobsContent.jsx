@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import Pagination from "react-bootstrap/Pagination";
 
 const AppliedJobsContent = () => {
   const [filterJobs, setFilterJobs] = useState("");
@@ -86,7 +87,7 @@ const AppliedJobsContent = () => {
 
   return (
     <div className="w-full min-h-screen pt-15 sm:px-4">
-      <div className="container mx-auto p-4 flex flex-col gap-5">
+      <div className="!container mx-auto p-4 flex flex-col gap-5">
         {/* Search Bar */}
         <div className="w-full">
           <div className="w-full border border-[var(--dark-bg)] flex items-center px-2 rounded-md gap-2">
@@ -101,7 +102,7 @@ const AppliedJobsContent = () => {
         </div>
         {/* Jobs */}
         <div className="w-full">
-          <h1 className="font-semibold text-lg text-gray-800">
+          <h1 className="!font-semibold !text-lg !text-gray-800">
             Applied Jobs (
             <span className="text-[var(--dark-bg)]">{applications.length}</span>
             )
@@ -110,11 +111,11 @@ const AppliedJobsContent = () => {
             <table className="w-full bg-white shadow-md rounded-lg overflow-hidden">
               <thead className="bg-[var(--light-bg)] text-white text-left">
                 <tr>
-                  <th className="p-3">S.No</th>
-                  <th className="p-3">Company</th>
-                  <th className="p-3">Position</th>
-                  <th className="p-3">Apply Date</th>
-                  <th className="p-3">Status</th>
+                  <th className="p-2">S.No</th>
+                  <th className="p-2">Company</th>
+                  <th className="p-2">Position</th>
+                  <th className="p-2">Apply Date</th>
+                  <th className="p-2">Status</th>
                 </tr>
               </thead>
               <tbody>

@@ -10,9 +10,9 @@ const Signup = () => {
   return (
     <div className="w-full min-h-screen flex items-center">
       {/* Form Side */}
-      <div className="w-full lg:w-1/4 flex items-center gap-3 px-5 py-10 flex-col bg-gray-100 min-h-screen overflow-y-auto hide-scrollbar">
+      <div className="w-full lg:w-1/4 flex items-center gap-3 !px-5 py-10 flex-col bg-gray-100 min-h-screen overflow-y-auto hide-scrollbar">
         <div className="w-full flex items-center justify-center">
-          <h1 className="text-3xl uppercase font-bold">
+          <h1 className="!text-3xl uppercase !font-bold">
             <HighlightText
               text={"Jobify"}
               highlight={"bify"}
@@ -21,7 +21,7 @@ const Signup = () => {
           </h1>
         </div>
         <div>
-          <h1 className="text-xl uppercase font-bold">
+          <h1 className="!text-xl uppercase !font-bold">
             <HighlightText
               text={"SignUp"}
               highlight={"Sign"}
@@ -29,12 +29,12 @@ const Signup = () => {
             />
           </h1>
         </div>
-        <div className="w-full py-2 flex items-center justify-center gap-6">
+        <div className="w-full !py-2 flex items-center justify-center gap-6">
           <Button
             text={"Google"}
             isText={true}
             className={
-              "w-full sm:w-[190px] flex items-center lg:w-full bg-[var(--dark-bg)] p-2 rounded-sm text-gray-100 text-sm font-semibold hover:opacity-88"
+              "w-full sm:w-[190px] flex items-center lg:w-full bg-[var(--dark-bg)] !p-2 !rounded-sm !text-gray-100 !text-sm !font-semibold hover:!opacity-88"
             }
             isImage={true}
             imgPosition="left"
@@ -45,7 +45,7 @@ const Signup = () => {
             text={"Facebook"}
             isText={true}
             className={
-              "w-full sm:w-[190px] flex items-center lg:w-full bg-transparent p-2 rounded-sm text-[var(--dark-bg)] text-sm font-semibold border border-[var(--dark-bg)] hover:text-gray-100 hover:bg-[var(--dark-bg)]"
+              "w-full sm:w-[190px] flex items-center lg:w-full !bg-transparent !p-2 !rounded-sm !text-[var(--dark-bg)] !text-sm !font-semibold !border !border-[var(--dark-bg)] hover:!text-gray-100 hover:!bg-[var(--dark-bg)]"
             }
             isImage={true}
             imgPosition="left"

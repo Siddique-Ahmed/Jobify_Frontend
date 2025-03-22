@@ -11,7 +11,7 @@ const SignupForm = () => {
     >
       <TextInput
         clasName={"w-full flex flex-col gap-2 mt-2"}
-        inputClass={"w-full px-2 py-2 rounded-md bg-white outline-none"}
+        inputClass={"w-full !px-2 !py-2 !rounded-md bg-white outline-none"}
         labelText={"Full Name"}
         placeHolder={"Full Name"}
         isLabel={true}
@@ -53,7 +53,7 @@ const SignupForm = () => {
         />
         <p className="font-semibold">
           Have an account ?{" "}
-          <Link to={"/login"} className="text-[var(--dark-bg)] text-end">
+          <Link to={"/login"} className="!text-[var(--dark-bg)] !no-underline !text-end">
             Login
           </Link>
         </p>

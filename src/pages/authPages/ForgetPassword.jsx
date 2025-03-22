@@ -13,15 +13,15 @@ const ForgetPassword = () => {
         <img src={loginBg} className="object-cover w-full" />
       </div>
       {/* Form Side */}
-      <div className="relative w-full lg:w-1/4 flex items-center justify-center gap-3 px-5 py-10 flex-col bg-gray-100 min-h-screen overflow-y-auto hide-scrollbar">
+      <div className="relative w-full lg:w-1/4 flex items-center justify-center gap-3 !px-5 !py-10 flex-col !bg-gray-100 min-h-screen overflow-y-auto hide-scrollbar">
         <Link
           to={"/login"}
-          className="absolute top-2 left-2 hover:text-[var(--dark-bg)]"
+          className="absolute !text-gray-500 !no-underline !top-2 !left-2 hover:!text-[var(--dark-bg)]"
         >
           <FaArrowLeft size={20} />
         </Link>
         <div>
-          <h1 className="text-xl uppercase font-bold">
+          <h1 className="!text-xl uppercase !font-bold">
             <HighlightText
               text={"Forget Password"}
               highlight={"Forget"}

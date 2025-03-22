@@ -5,7 +5,7 @@ import contacdtImg from "../assets/images/contact_form.webp";
 const ContactFormSection = () => {
   return (
     <div className="w-full px-4 py-12">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 ">
+      <div className="!container mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 ">
         <section className="py-8 lg:py-16 px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-[var(--dark-bg)]">

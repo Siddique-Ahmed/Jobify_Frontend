@@ -9,13 +9,13 @@ import Button from "../global/Button";
 const ProfileUpdateForm = () => {
   return (
     <div className="flex w-full min-h-screen items-center">
-      <div className="container mx-auto p-2 py-4 bg-white shadow-md rounded-md">
+      <div className="!container mx-auto !p-2 !py-4 bg-white !shadow-md !rounded-md">
         <div className="flex flex-col sm:flex-row items-center">
           {/* image side */}
-          <div className="relative w-full sm:w-1/4 h-auto items-center flex flex-col gap-2">
+          <div className="!relative w-full sm:w-1/4 h-auto items-center flex flex-col gap-2">
             <Link
               to={"/profile"}
-              className="absolute -top-3 left-0 sm:-top-35 lg:-top-35 lg:left-0 text-gray-500 hover:text-[var(--dark-bg)]"
+              className="absolute -top-3 left-0 sm:-top-35 lg:-top-35 lg:left-0 !text-gray-500 hover:!text-[var(--dark-bg)]"
             >
               <FaArrowLeft size={20} />
             </Link>
@@ -35,7 +35,7 @@ const ProfileUpdateForm = () => {
                   labelText={"Full Name"}
                   labelClass={"text-sm font-bold"}
                   inputName={"fullName"}
-                  inputClass={"w-full bg-gray-100 outline-none p-2 rounded-md"}
+                  inputClass={"w-full bg-gray-100 outline-none !p-2 rounded-md"}
                   placeHolder={"full Name"}
                   clasName={"mt-1 w-full"}
                 />
@@ -111,7 +111,7 @@ const ProfileUpdateForm = () => {
               <div>
                 <TextInput
                   isLabel={true}
-                  labelText={"Phone Numbert"}
+                  labelText={"Phone Number"}
                   labelClass={"text-sm font-bold"}
                   inputName={"phoneNumbert"}
                   inputClass={
@@ -166,7 +166,7 @@ const ProfileUpdateForm = () => {
               </div>
             </div>
             <div className="w-full mt-2">
-              <h1 className="text-sm font-bold">Address</h1>
+              <h1 className="!text-sm !font-bold">Address</h1>
               <textarea
                 name="address"
                 className="bg-gray-100 mt-1 w-full outline-none p-3 rounded-md"

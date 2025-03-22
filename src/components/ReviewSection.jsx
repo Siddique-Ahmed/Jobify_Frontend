@@ -39,7 +39,7 @@ const userDetail = [
 const ReviewSection = () => {
   return (
     <div className=" px-5 py-10">
-      <div className="container mx-auto flex flex-wrap md:grid md:grid-cols-2 gap-3">
+      <div className="!container mx-auto flex flex-wrap md:grid md:grid-cols-2 gap-3">
         {userDetail.map((detail, ind) => (
           <TestimonialCard
             key={ind}

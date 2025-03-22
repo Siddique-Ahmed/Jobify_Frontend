@@ -41,7 +41,7 @@ const YouKnowUs = () => {
           highlight={"bify"}
         />
       </h1>
-      <div className="container mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-4 md:py-8">
+      <div className="!container mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-4 md:py-8">
         <div className="flex justify-center">
           <img
             src={home_faq_img}

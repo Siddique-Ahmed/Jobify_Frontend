@@ -8,9 +8,9 @@ const ResetPassword = () => {
   return (
     <div className="w-full min-h-screen flex items-center">
       {/* Form Side */}
-      <div className="w-full lg:w-1/4 flex items-center justify-center gap-3 px-5 py-10 flex-col bg-gray-100 min-h-screen overflow-y-auto hide-scrollbar">
+      <div className="w-full lg:w-1/4 flex items-center justify-center gap-3 !px-5 !py-10 flex-col bg-gray-100 min-h-screen overflow-y-auto hide-scrollbar">
         <div>
-          <h1 className="text-xl uppercase font-bold">
+          <h1 className="!text-xl uppercase !font-bold">
             <HighlightText
               text={"New Password"}
               highlight={"Password"}

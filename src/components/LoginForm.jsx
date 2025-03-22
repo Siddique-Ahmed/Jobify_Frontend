@@ -10,8 +10,8 @@ const LoginForm = () => {
       className="w-full sm:w-[430px] lg:w-full flex flex-col items-center justify-center"
     >
       <TextInput
-        clasName={"w-full flex flex-col gap-2 mt-2"}
-        inputClass={"w-full px-2 py-2 rounded-md bg-white outline-none"}
+        clasName={"w-full flex flex-col gap-2 !mt-2"}
+        inputClass={"w-full !p-2 !rounded-md !bg-white outline-none"}
         labelText={"Email"}
         placeHolder={"Email"}
         isLabel={true}
@@ -19,7 +19,7 @@ const LoginForm = () => {
       />
       <TextInput
         clasName={"w-full flex flex-col gap-2 mt-2"}
-        inputClass={"w-full px-2 py-2 rounded-md bg-white outline-none"}
+        inputClass={"w-full !px-2 !py-2 !rounded-md !bg-white outline-none"}
         labelText={"password"}
         placeHolder={"password"}
         inputType={"password"}
@@ -27,7 +27,7 @@ const LoginForm = () => {
         inputFunction={() => console.log("input")}
       />
       <div className="py-2 w-full flex flex-col gap-2">
-        <Link to={"/forget-password"} className="text-[var(--dark-bg)] font-semibold text-end">
+        <Link to={"/forget-password"} className="!text-[var(--dark-bg)] !no-underline !mb-0 !font-semibold !text-end">
           Forgot Password?
         </Link>
       </div>
@@ -36,12 +36,12 @@ const LoginForm = () => {
           text={"Login"}
           isText={true}
           className={
-            "w-full bg-[var(--dark-bg)] mb-3 p-2 rounded-sm text-gray-100 font-bold hover:opacity-85"
+            "w-full !bg-[var(--dark-bg)] !mb-3 !p-2 !rounded-sm !text-gray-100 !font-bold hover:!opacity-85"
           }
           buttonType="submit"
         />
         <p className="font-semibold">
-          Don't have an account ? <Link to={"/signup"} className="text-[var(--dark-bg)] text-end">Signup</Link>
+          Don't have an account ? <Link to={"/signup"} className="!text-[var(--dark-bg)] !no-underline !text-end">Signup</Link>
         </p>
       </div>
     </form>

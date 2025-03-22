@@ -130,7 +130,7 @@ const SavedJobs = () => {
       <div className="w-full min-h-screen flex items-center">
         <MainContent
           className={
-            "w-full bg-gray-100 pt-20 py-5 min-h-screen md:h-screen md:overflow-y-auto hide-scrollbar"
+            "w-full bg-gray-100 !pt-20 !py-5 min-h-screen md:h-screen md:overflow-y-auto hide-scrollbar"
           }
           data={jobListings}
         />

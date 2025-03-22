@@ -57,8 +57,8 @@ const Header = () => {
   const [showDropDown, setShowDropDown] = useState(false);
   const auth = true;
   return (
-    <div className="w-full z-50 min-h-[50px] bg-gray-100 py-3 shadow-md fixed top-0 left-0">
-      <div className="container mx-auto h-full flex items-center gap-2 justify-between px-3 sm:px-10 relative">
+    <div className="!w-full z-50 min-h-[50px] bg-gray-100 py-3 shadow-md fixed top-0 left-0">
+      <div className="!container mx-auto h-full flex items-center gap-2 justify-between px-3 sm:px-10 relative">
         {/* hamburger */}
 
         {/* for logo */}
@@ -74,20 +74,20 @@ const Header = () => {
           )}
           <Link
             to={"/"}
-            className="flex items-center uppercase font-bold text-2xl"
+            className="flex items-center !no-underline m-0 uppercase font-bold text-2xl"
           >
-            <h1 className="text-[var(--text-black)]">Jo</h1>
+            <span className="text-[var(--text-black)]">Jo</span>
             <span className="text-[var(--dark-bg)]">bify</span>
           </Link>
         </div>
         {/* for navigations links and login */}
         <div className="flex items-center gap-4">
-          <ul className="hidden md:flex items-center gap-3">
+          <ul className="hidden md:flex items-center m-0 gap-3">
             {navigationLinks.map((items, ind) => (
               <li key={ind}>
                 <Link
                   to={items.link}
-                  className="font-semibold hover:text-[var(--dark-bg)]"
+                  className="font-semibold !no-underline text-black hover:!text-[var(--dark-bg)]"
                 >
                   <span>{items.title}</span>
                 </Link>
@@ -113,22 +113,22 @@ const Header = () => {
               {showDropDown && (
                 <div
                   className={
-                    "w-[140px] absolute transform top-[57px] translate-x-[-70%] sm:translate-x-[-49%] bg-gray-100 px-2 py-3 rounded-sm shadow-md"
+                    "w-[140px] absolute transform top-[57px] translate-x-[-70%] sm:translate-x-[-64%] bg-gray-100 px-2 py-3 rounded-sm shadow-md"
                   }
                 >
-                  <ul className="flex flex-col gap-2 mb-2">
+                  <ul className="flex flex-col gap-2 !pl-0">
                     {userProfileDropDown.map((items, ind) => (
                       <li
                         key={ind}
-                        className="hover:bg-gray-200 hover:text-[var(--dark-bg)]"
+                        className="hover:bg-gray-200 !hover:text-[var(--dark-bg)]"
                       >
                         <Link
                           to={items.link}
-                          className="flex items-center gap-2 p-2 "
+                          className="!flex !no-underline hover:!text-[var(--dark-bg)] text-black !items-center gap-2 p-2 "
                         >
                           <span>{items.icon}</span>
                           {items.text && (
-                            <p className="text-[14px] font-semibold">
+                            <p className="text-[14px] mb-0 font-semibold">
                               {items.text}
                             </p>
                           )}
@@ -157,7 +157,7 @@ const Header = () => {
                   text={"Login"}
                   isText={true}
                   className={
-                    "p-2 px-4 rounded-md border border-[var(--dark-bg)] font-semibold bg-[var(--dark-bg)] hover:text-[var(--dark-bg)] hover:bg-transparent text-[var(--text-white)]"
+                    "p-2 px-4 !rounded-sm !border !border-[var(--dark-bg)] font-semibold bg-[var(--dark-bg)] hover:text-[var(--dark-bg)] hover:!bg-transparent text-[var(--text-white)]"
                   }
                 />
               </Link>
@@ -166,7 +166,7 @@ const Header = () => {
                   text={"Signup"}
                   isText={true}
                   className={
-                    "p-2 px-4 rounded-md border border-[var(--dark-bg)] font-semibold bg-transparent hover:text-[var(--text-white)] hover:bg-[var(--dark-bg)] text-[var(--dark-bg)]"
+                    "p-2 px-4 !rounded-sm !border !border-[var(--dark-bg)] font-semibold bg-transparent hover:!text-[var(--text-white)] hover:!bg-[var(--dark-bg)] text-[var(--dark-bg)]"
                   }
                 />
               </Link>
@@ -177,16 +177,16 @@ const Header = () => {
         {/* for mobile list */}
         {isOpen && (
           <div
-            className={`fixed block md:hidden top-0 left-0 w-full sm:w-[200px] min-h-screen bg-gray-100 px-4 py-2 shadow-lg 
+            className={`fixed block md:hidden top-0 left-0 w-full sm:w-[200px] min-h-screen bg-gray-100 px-2 py-2 shadow-lg 
             transform ${isOpen ? "translate-x-0" : "-translate-x-full"} 
             transition-transform duration-300 ease-in-out`}
           >
             <div className="h-10 flex items-center justify-between">
               <Link
                 to={"/"}
-                className="flex items-center uppercase font-bold text-2xl"
+                className="flex items-center !no-underline uppercase font-bold text-2xl"
               >
-                <h1 className="text-[var(--text-black)]">Jo</h1>
+                <span className="text-[var(--text-black)]">Jo</span>
                 <span className="text-[var(--dark-bg)]">bify</span>
               </Link>
               {isOpen && (
@@ -199,12 +199,12 @@ const Header = () => {
                 />
               )}
             </div>
-            <ul className="flex flex-col mt-4 md:hidden gap-2">
+            <ul className="flex !pl-0 flex-col mt-4 md:hidden gap-2">
               {navigationLinks.map((items, ind) => (
                 <li key={ind}>
                   <Link
                     to={items.link}
-                    className="font-semibold hover:bg-gray-300 p-2 rounded-md flex items-center gap-2 hover:text-[var(--light-bg)]"
+                    className="font-semibold !no-underline text-black hover:bg-gray-300 p-2 rounded-md flex items-center gap-2 hover:!text-[var(--dark-bg)]"
                   >
                     <span>{items.icon}</span>
                     <span>{items.title}</span>

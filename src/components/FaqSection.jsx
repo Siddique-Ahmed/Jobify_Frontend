@@ -67,7 +67,7 @@ const FaqSection = () => {
           color="var(--dark-bg)"
         />
       </h1>
-      <Accordion data={faqs} className={"px-3 py-10 container mx-auto"} />
+      <Accordion data={faqs} className={"px-3 py-10 !container mx-auto"} />
     </div>
   );
 };
