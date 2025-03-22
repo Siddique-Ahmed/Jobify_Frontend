@@ -42,7 +42,7 @@ const userProfileDropDown = [
   },
   {
     icon: <FaBriefcase size={17} />,
-    link: "/apply-jobs",
+    link: "/applied-jobs",
     text: "Applied Jobs",
   },
   {

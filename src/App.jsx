@@ -37,7 +37,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/forget-password" element={<ForgetPassword />} />
         <Route path="/reset-password/:id/:token" element={<ResetPassword />} />
-        <Route path="/apply-jobs" element={<AppliedJobs />} />
+        <Route path="/applied-jobs" element={<AppliedJobs />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/update/:id" element={<ProfileUpdate />} />
