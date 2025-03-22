@@ -8,7 +8,7 @@ const ProfileContent = () => {
     <div className="flex w-full min-h-screen items-center !pt-20 !p-4">
       <div className="!container mx-auto !p-2 !py-4 !bg-gray-100 !shadow-md !rounded-md flex flex-col md:!flex-row items-center">
         {/* image side */}
-        <div className="relative w-full md:w-1/4 h-auto !items-center !flex !flex-row md:!flex-col gap-2">
+        <div className="relative w-full md:w-1/4 h-auto !pt-5 sm:!pt-0 !items-center !flex !flex-row md:!flex-col gap-2">
           <Link
             to={"/profile/update/asd"}
             className="!absolute !top-0 !right-0 md:!-top-20 lg:!-top-10 md:!-right-4 lg:!-right-4 !text-gray-500 hover:!text-[var(--dark-bg)]"
@@ -21,20 +21,21 @@ const ProfileContent = () => {
               className="w-full h-full !object-cover !shadow-md !rounded-full"
             />
           </div>
-          <div className="flex flex-col md:!mt-2">
+          <div className="flex flex-col md:!mt-2 gap-2">
             <div className="w-full !flex md:!flex-col !items-center md:!items-start !flex-wrap !gap-1">
               <span className="!text-sm !font-bold"> Full Name :</span>
-              <h1 className="!text-gray-700 !text-sm !font-medium">
+              <h1 className="!text-gray-700 !text-sm !mb-0
+ !font-medium">
                 Siddique Ahmed
               </h1>
             </div>
             <div className="w-full !flex md:!flex-col !items-center md:!items-start !flex-wrap !gap-1">
               <span className="!text-sm !font-bold">Username :</span>
-              <p className="!text-gray-700 !font-medium">@siddique0709</p>
+              <p className="!text-gray-700 !text-sm !mb-0 !font-medium">@siddique0709</p>
             </div>
             <div className="w-full !flex md:!flex-col !items-center md:!items-start !flex-wrap !gap-1">
               <span className="!text-sm !font-bold">Email :</span>
-              <p className="!text-gray-700 !font-medium">siddique@gmail.com</p>
+              <p className="!text-gray-700 !text-sm !mb-0 !font-medium">siddique@gmail.com</p>
             </div>
           </div>
         </div>
@@ -43,36 +44,36 @@ const ProfileContent = () => {
           <div className="!p-2 !px-3 w-full !grid !grid-cols-2 !gap-4">
             <div>
               <span className="!text-sm !font-bold">Age</span>
-              <h1 className="!text-gray-700 !text-lg !font-medium">24</h1>
+              <h1 className="!text-gray-700 !text-sm !font-thin">24</h1>
             </div>
             <div>
               <span className="!text-sm !font-bold">City</span>
-              <h1 className="!text-gray-700 !text-lg !font-medium">Karachi</h1>
+              <h1 className="!text-gray-700 !text-sm !font-thin">Karachi</h1>
             </div>
             <div>
               <span className="!text-sm !font-bold">Education</span>
-              <h1 className="!text-gray-700 !text-lg !font-medium">Bachelor</h1>
+              <h1 className="!text-gray-700 !text-sm !font-thin">Bachelor</h1>
             </div>
             <div>
               <span className="!text-sm !font-bold">Phone Number</span>
-              <h1 className="!text-gray-700 !text-lg !font-medium">
+              <h1 className="!text-gray-700 !text-sm !font-thin">
                 +923243457768
               </h1>
             </div>
             <div>
               <span className="!text-sm !font-bold">Experience</span>
-              <h1 className="!text-gray-700 !text-lg !font-medium">2 year</h1>
+              <h1 className="!text-gray-700 !text-sm !font-thin">2 year</h1>
             </div>
             <div>
               <span className="!text-sm !font-bold">Bio</span>
-              <h1 className="!text-gray-700 !text-sm !font-medium">
+              <h1 className="!text-gray-700 !text-sm !font-thin">
                 A full Stack Developer and ui designer with 3 years of
                 experience
               </h1>
             </div>
             <div>
               <span className="!text-sm !font-bold">Address</span>
-              <h1 className="!text-gray-700 !text-sm !font-medium">
+              <h1 className="!text-gray-700 !text-sm !font-thin">
                 orangi town sector 10 karachi
               </h1>
             </div>
