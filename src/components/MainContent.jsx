@@ -18,11 +18,11 @@ const MainContent = ({ className, data }) => {
   return (
     <div className={`${className}`}>
       {pathname === "/saved-jobs" && (
-        <div className="!pb-4 !container mx-auto px-4">
+        <div className="!pb-4 container mx-auto px-4">
           <h1>Saved Jobs ({data?.length})</h1>
         </div>
       )}
-      <div className="flex !!container !mx-auto px-4 pb-4 items-center flex-wrap gap-2">
+      <div className="flex container !mx-auto px-4 pb-4 items-center flex-wrap gap-2">
         <Input
           icon={<FaSearch />}
           iconPosition="left"
@@ -34,7 +34,7 @@ const MainContent = ({ className, data }) => {
           inputFunction={(e) => setFilterJobs(e.target.value)}
         />
       </div>
-      <div className="!px-5 !!container !mx-auto grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 place-items-center">
+      <div className="!px-5 container !mx-auto grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 place-items-center">
         {filterTheJobs?.map((jobs, ind) => {
           return <JobCard key={ind} data={jobs} />;
         })}

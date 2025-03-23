@@ -60,14 +60,16 @@ const faqs = [
 const FaqSection = () => {
   return (
     <div className="flex flex-col items-center gap-2 py-12">
-      <h1 className="text-xl md:text-2xl text-center">
-        <HighlightText
-          text={"FAQs (Frequently Asked Questions)"}
-          highlight={"FAQs"}
-          color="var(--dark-bg)"
-        />
-      </h1>
-      <Accordion data={faqs} className={"px-3 py-10 !container mx-auto"} />
+      <div className="container mx-auto">
+        <h1 className="!text-xl md:!text-2xl !text-center">
+          <HighlightText
+            text={"FAQs (Frequently Asked Questions)"}
+            highlight={"FAQs"}
+            color="var(--dark-bg)"
+          />
+        </h1>
+        <Accordion data={faqs} className={"px-3 py-10 !container mx-auto"} />
+      </div>
     </div>
   );
 };

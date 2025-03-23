@@ -87,7 +87,7 @@ const AppliedJobsContent = () => {
 
   return (
     <div className="w-full min-h-screen pt-15 sm:px-4">
-      <div className="!container mx-auto p-4 flex flex-col gap-5">
+      <div className="container mx-auto p-4 flex flex-col gap-5">
         {/* Search Bar */}
         <div className="w-full">
           <div className="w-full border border-[var(--dark-bg)] flex items-center px-2 rounded-md gap-2">
@@ -108,7 +108,7 @@ const AppliedJobsContent = () => {
             )
           </h1>
           <div className="w-full overflow-x-auto mt-2">
-            <table className="w-full bg-white shadow-md rounded-lg overflow-hidden">
+            <table className="w-full bg-white shadow-md rounded-lg overflow-hidden !hide-scrollbar">
               <thead className="bg-[var(--light-bg)] text-white text-left">
                 <tr>
                   <th className="p-2">S.No</th>

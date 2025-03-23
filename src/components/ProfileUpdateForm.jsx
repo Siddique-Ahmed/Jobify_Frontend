@@ -9,13 +9,13 @@ import Button from "../global/Button";
 const ProfileUpdateForm = () => {
   return (
     <div className="flex w-full min-h-screen items-center">
-      <div className="!container mx-auto !p-2 !py-4 bg-white !shadow-md !rounded-md">
+      <div className="container mx-auto !p-2 !py-4 bg-white !shadow-md !rounded-md">
         <div className="flex flex-col sm:flex-row items-center">
           {/* image side */}
           <div className="!relative w-full sm:w-1/4 h-auto items-center flex flex-col gap-2">
             <Link
               to={"/profile"}
-              className="absolute -top-3 left-0 sm:-top-35 lg:-top-35 lg:left-0 !text-gray-500 hover:!text-[var(--dark-bg)]"
+              className="absolute !-top-2 !left-0 sm:!-top-40 !text-gray-500 hover:!text-[var(--dark-bg)]"
             >
               <FaArrowLeft size={20} />
             </Link>

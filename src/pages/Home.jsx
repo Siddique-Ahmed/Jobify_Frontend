@@ -33,7 +33,7 @@ const Home = () => {
           "Explore the latest job openings from top recruiters and apply with just one click. Take the next step in your career effortlessly with our seamless job search platform!"
         }
         className={
-          " flex items-center justify-center flex-col gap-2 pt-[80px] sm:pt-20"
+          "flex items-center justify-center flex-col gap-2 pt-[80px] sm:pt-20"
         }
         headingClass={
           "text-2xl md:text-3xl md:text-4xl !text-gray-100 font-bold text-center"

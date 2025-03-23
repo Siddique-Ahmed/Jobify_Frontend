@@ -43,7 +43,7 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
   const [city, setCity] = useState(false);
   return (
     <div className={`${className}`}>
-      <div className="w-full flex items-center justify-end px-4 pb-5">
+      <div className="w-full flex items-center justify-end !px-4 !pb-5">
         <Button
           onClick={() => setIsOpen(!isOpen)}
           isIcon={true}
@@ -54,7 +54,7 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
       </div>
       {isOpen ? (
         <div className="w-full flex items-center justify-center pb-4">
-          <h1 className="font-bold text-lg uppercase">
+          <h1 className="!font-bold !text-lg uppercase">
             <HighlightText
               text={"filter jobs"}
               highlight={"jobs"}
@@ -79,7 +79,7 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
         />
         {company && (
           <div className="px-3">
-            <ul className="flex flex-col gap-2">
+            <ul className="flex !pl-0 flex-col gap-2">
               {companies.map((company, ind) => (
                 <li
                   className="text-gray-700 flex items-center gap-2 hover:text-[var(--dark-bg)]"
@@ -109,7 +109,7 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
         />
         {position && (
           <div className="px-3">
-            <ul className="flex flex-col gap-2">
+            <ul className="flex !pl-0 flex-col gap-2">
               {positions.map((position, ind) => (
                 <li
                   className="text-gray-700 flex items-center gap-2 hover:text-[var(--dark-bg)]"
@@ -137,7 +137,7 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
         />
         {salary && (
           <div className="px-3">
-            <ul className="flex flex-col gap-2">
+            <ul className="flex !pl-0 flex-col gap-2">
               {salaries.map((salary, ind) => (
                 <li
                   className="text-gray-700 flex items-center gap-2 hover:text-[var(--dark-bg)]"
@@ -165,7 +165,7 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
         />
         {city && (
           <div className="px-3">
-            <ul className="flex flex-col gap-2">
+            <ul className="flex !pl-0 flex-col gap-2">
               {cities.map((city, ind) => (
                 <li
                   className="text-gray-700 flex items-center gap-2 hover:text-[var(--dark-bg)]"

@@ -18,6 +18,7 @@ import ProfileUpdate from "./pages/ProfileUpdate";
 import ForgetPassword from "./pages/authPages/ForgetPassword";
 import ResetPassword from "./pages/authPages/ResetPassword";
 import JobDetail from "./pages/JobDetail";
+import JobApplyForm from "./pages/JobApplyForm";
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/settings" element={<Settings />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/update/:id" element={<ProfileUpdate />} />
+        <Route path="/apply-form/:id" element={<JobApplyForm />} />
       </Routes>
     </BrowserRouter>
   );

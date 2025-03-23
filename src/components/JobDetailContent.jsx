@@ -1,11 +1,12 @@
 import React from "react";
 import Button from "../global/Button";
 import { FaBookmark, FaRegBookmark } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const JobDetailContent = () => {
   return (
     <div className="w-full min-h-screen pt-18 sm:px-4">
-      <div className="!container mx-auto px-4 py-3">
+      <div className="container mx-auto px-4 py-3">
         {/* job Detail content */}
         <div className="w-full flex gap-4 flex-col">
           {/* first side */}
@@ -19,8 +20,8 @@ const JobDetailContent = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <h1 className="text-lg font-bold text-gray-800">Google</h1>
-                <span className="text-sm font-semibold text-gray-500">
+                <h1 className="!text-lg !font-bold !mb-0 !text-gray-800">Google</h1>
+                <span className="!text-sm !font-semibold !text-gray-500">
                   Karachi
                 </span>
               </div>
@@ -31,29 +32,29 @@ const JobDetailContent = () => {
                   isIcon={true}
                   icon={<FaRegBookmark size={18} />}
                   iconPosition={"center"}
-                  className={" rounded-full p-2 border border-gray-300"}
+                  className={"rounded-full !p-2 border border-gray-300"}
                 />
-                <Button
-                  isText={true}
-                  text={"Apply"}
-                  className={
-                    "w-[90px] px-4 p-2 bg-blue-600 font-bold text-gray-100 rounded-sm hover:bg-blue-500"
-                  }
-                />
+                <Link to={"/apply-form/:id"}>
+                  <Button
+                    isText={true}
+                    text={"Apply"}
+                    className={
+                      "w-[190px] !px-4 !p-2 bg-blue-600 !font-bold text-gray-100 rounded-sm hover:bg-blue-500"
+                    }
+                  />
+                </Link>
               </div>
             </div>
           </div>
           {/* second side */}
           <div className="w-full flex flex-col gap-1.5">
             <div className="w-full flex items-center justify-between">
-            <h1 className="font-bold text-xl sm:text-2xl text-gray-700">
-              Frontend Developer
-            </h1>
-            <span className="text-gray-500 font-medium">
-              10/4/2023
-            </span>
+              <h1 className="!font-bold !text-xl sm:!text-2xl !text-gray-700">
+                Frontend Developer
+              </h1>
+              <span className="!text-gray-500 !font-medium">10/4/2023</span>
             </div>
-            <span className="text-md text-gray-500 font-semibold">
+            <span className="!text-md !text-gray-500 !font-semibold">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Veritatis reiciendis vero adipisci odio suscipit eligendi, velit
               debitis dolorem modi illum tenetur voluptatum provident corrupti
@@ -72,20 +73,24 @@ const JobDetailContent = () => {
               ad, tempore, molestias eius sunt, doloremque quas at rerum
               quisquam enim dolorem. Commodi quaerat vel nemo alias
             </span>
-            <div className="w-full my-2 flex sm:hidden justify-center relative items-center gap-2">
+            <div className="w-full my-2 flex sm:hidden flex-row-reverse justify-between items-center gap-2">
               <Button
                 isIcon={true}
                 icon={<FaRegBookmark size={18} />}
                 iconPosition={"center"}
-                className={" rounded-full self-end p-2 border border-gray-300 absolute right-0 top-0"}
-              />
-              <Button
-                isText={true}
-                text={"Apply"}
                 className={
-                  "w-[190px] px-4 p-2 bg-blue-600 font-bold text-gray-100 rounded-sm hover:bg-blue-500"
+                  " rounded-full self-end p-2 border border-gray-300"
                 }
               />
+              <Link to={"/apply-form/:id"}>
+                <Button
+                  isText={true}
+                  text={"Apply"}
+                  className={
+                    "w-[190px] px-4 p-2 bg-blue-600 font-bold text-gray-100 rounded-sm hover:bg-blue-500"
+                  }
+                />
+              </Link>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ import Button from "../global/Button";
 const ProfileContent = () => {
   return (
     <div className="flex w-full min-h-screen items-center !pt-20 !p-4">
-      <div className="!container mx-auto !p-2 !py-4 !bg-gray-100 !shadow-md !rounded-md flex flex-col md:!flex-row items-center">
+      <div className="container mx-auto !p-2 !py-4 !bg-gray-100 !shadow-md !rounded-md flex flex-col md:!flex-row items-center">
         {/* image side */}
         <div className="relative w-full md:w-1/4 h-auto !pt-5 sm:!pt-0 !items-center !flex !flex-row md:!flex-col gap-2">
           <Link
@@ -24,18 +24,24 @@ const ProfileContent = () => {
           <div className="flex flex-col md:!mt-2 gap-2">
             <div className="w-full !flex md:!flex-col !items-center md:!items-start !flex-wrap !gap-1">
               <span className="!text-sm !font-bold"> Full Name :</span>
-              <h1 className="!text-gray-700 !text-sm !mb-0
- !font-medium">
+              <h1
+                className="!text-gray-700 !text-sm !mb-0
+ !font-medium"
+              >
                 Siddique Ahmed
               </h1>
             </div>
             <div className="w-full !flex md:!flex-col !items-center md:!items-start !flex-wrap !gap-1">
               <span className="!text-sm !font-bold">Username :</span>
-              <p className="!text-gray-700 !text-sm !mb-0 !font-medium">@siddique0709</p>
+              <p className="!text-gray-700 !text-sm !mb-0 !font-medium">
+                @siddique0709
+              </p>
             </div>
             <div className="w-full !flex md:!flex-col !items-center md:!items-start !flex-wrap !gap-1">
               <span className="!text-sm !font-bold">Email :</span>
-              <p className="!text-gray-700 !text-sm !mb-0 !font-medium">siddique@gmail.com</p>
+              <p className="!text-gray-700 !text-sm !mb-0 !font-medium">
+                siddique@gmail.com
+              </p>
             </div>
           </div>
         </div>

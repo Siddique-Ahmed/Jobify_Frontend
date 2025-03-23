@@ -12,6 +12,7 @@ const TextInput = ({
   iconPosition = "left",
   inputType = "text",
   inputName,
+  accept
 }) => {
   return (
     <div className={`${clasName}`}>
@@ -27,6 +28,7 @@ const TextInput = ({
         className={`${inputClass}`}
         placeholder={placeHolder}
         name={inputName}
+        accept={accept}
       />
       {icon && iconPosition == "right" ? <span>{icon}</span> : null}
     </div>
