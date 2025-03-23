@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import MainContent from "../components/MainContent";
+import SavedJobContent from "../components/SavedJobContent";
 
 const jobListings = [
   {
@@ -128,9 +128,9 @@ const SavedJobs = () => {
     <div>
       <Header />
       <div className="w-full min-h-screen flex items-center">
-        <MainContent
+        <SavedJobContent
           className={
-            "w-full bg-gray-100 !pt-20 !py-5 min-h-screen md:h-screen md:overflow-y-auto hide-scrollbar"
+            "w-full bg-gray-100 !pt-20 !py-5 min-h-screen"
           }
           data={jobListings}
         />

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import JobCard from "./JobCard";
 import Input from "../global/TextInput";
 import { FaSearch } from "react-icons/fa";
+import Pagination from "react-bootstrap/Pagination";
 
-const MainContent = ({ className, data }) => {
+const SavedJobContent = ({ className, data }) => {
   const [filterJobs, setFilterJobs] = useState("");
 
   const filterTheJobs = data.filter(
@@ -15,7 +16,13 @@ const MainContent = ({ className, data }) => {
 
   return (
     <div className={`${className}`}>
-      <div className="flex container !mx-auto px-4 pb-4 items-center flex-wrap gap-2">
+      <div className="!pb-4 container mx-auto px-4">
+        <h1 className="text-xl sm:!text-2xl">
+          Saved Jobs (
+          <span className="text-[var(--dark-bg)]">{data?.length}</span>)
+        </h1>
+      </div>
+      <div className="flex container !mx-auto px-4 pb-4 items-center gap-2">
         <Input
           icon={<FaSearch />}
           iconPosition="left"
@@ -36,4 +43,4 @@ const MainContent = ({ className, data }) => {
   );
 };
 
-export default MainContent;
+export default SavedJobContent;
