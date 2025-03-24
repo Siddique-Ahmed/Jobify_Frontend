@@ -50,7 +50,10 @@ const userProfileDropDown = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showDropDown, setShowDropDown] = useState(false);
-  const auth = true;
+  const auth = {
+    name: "siddique",
+    role: "student",
+  };
   return (
     <div className="!w-full z-[9999] min-h-[50px] bg-gray-100 py-3 shadow-md fixed top-0 left-0">
       <div className="container mx-auto h-full flex items-center gap-2 justify-between px-3 sm:px-10 relative">
@@ -90,7 +93,7 @@ const Header = () => {
             ))}
           </ul>
 
-          {auth ? (
+          {auth && auth.role === "student" ? (
             /* if User is login so he see his profile */
             <div className="relative">
               {/* avatar div */}

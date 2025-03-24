@@ -18,6 +18,7 @@ import ForgetPassword from "./pages/authPages/ForgetPassword";
 import ResetPassword from "./pages/authPages/ResetPassword";
 import JobDetail from "./pages/JobDetail";
 import JobApplyForm from "./pages/JobApplyForm";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
   return (
@@ -30,17 +31,59 @@ const App = () => {
         <Route path="/instruction" element={<Instructions />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/benefits" element={<Benefit />} />
-        <Route path="/saved-jobs" element={<SavedJobs />} />
+        <Route
+          path="/saved-jobs"
+          element={
+            <ProtectedRoute>
+              <SavedJobs />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/jobs" element={<Jobs />} />
-        <Route path="/job-detail/:id" element={<JobDetail />} />
+        <Route
+          path="/job-detail/:id"
+          element={
+            <ProtectedRoute>
+              <JobDetail />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forget-password" element={<ForgetPassword />} />
         <Route path="/reset-password/:id/:token" element={<ResetPassword />} />
-        <Route path="/applied-jobs" element={<AppliedJobs />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/profile/update/:id" element={<ProfileUpdate />} />
-        <Route path="/apply-form/:id" element={<JobApplyForm />} />
+        <Route
+          path="/applied-jobs"
+          element={
+            <ProtectedRoute>
+              <AppliedJobs />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile/update/:id"
+          element={
+            <ProtectedRoute>
+              <ProfileUpdate />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/apply-form/:id"
+          element={
+            <ProtectedRoute>
+              <JobApplyForm />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
