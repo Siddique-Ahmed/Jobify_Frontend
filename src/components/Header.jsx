@@ -45,11 +45,6 @@ const userProfileDropDown = [
     link: "/applied-jobs",
     text: "Applied Jobs",
   },
-  {
-    icon: <IoSettings size={17} />,
-    link: "/settings",
-    text: "Setings",
-  },
 ];
 
 const Header = () => {

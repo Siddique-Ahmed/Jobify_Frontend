@@ -12,7 +12,6 @@ import Login from "./pages/authPages/Login";
 import Signup from "./pages/authPages/Signup";
 import SavedJobs from "./pages/SavedJobs";
 import AppliedJobs from "./pages/AppliedJobs";
-import Settings from "./pages/Settings";
 import Profile from "./pages/Profile";
 import ProfileUpdate from "./pages/ProfileUpdate";
 import ForgetPassword from "./pages/authPages/ForgetPassword";
@@ -39,7 +38,6 @@ const App = () => {
         <Route path="/forget-password" element={<ForgetPassword />} />
         <Route path="/reset-password/:id/:token" element={<ResetPassword />} />
         <Route path="/applied-jobs" element={<AppliedJobs />} />
-        <Route path="/settings" element={<Settings />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/update/:id" element={<ProfileUpdate />} />
         <Route path="/apply-form/:id" element={<JobApplyForm />} />
