@@ -43,7 +43,7 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
   const [city, setCity] = useState(false);
   return (
     <div className={`${className}`}>
-      <div className="w-full flex items-center justify-end !px-4 !pb-5">
+      <div className="w-full flex items-center justify-end !pb-5">
         <Button
           onClick={() => setIsOpen(!isOpen)}
           isIcon={true}
@@ -72,9 +72,9 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
           icon={
             company ? <FaCaretDown size={20} /> : <FaCaretRight size={20} />
           }
-          className={
-            "w-full text-left p-2 font-semibold text-gray-500 hover:text-[var(--dark-bg)] flex items-center justify-between transition-all delay-200"
-          }
+          className={`w-full text-left p-2 font-semibold ${
+            company ? "bg-gray-100" : "bg-white"
+          } text-gray-500 hover:text-[var(--dark-bg)] flex items-center justify-between`}
           onClick={() => setCompany(!company)}
         />
         {company && (
@@ -102,9 +102,9 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
           icon={
             position ? <FaCaretDown size={20} /> : <FaCaretRight size={20} />
           }
-          className={
-            "w-full text-left p-2 font-semibold text-gray-500 hover:text-[var(--dark-bg)] flex items-center justify-between transition-all delay-200"
-          }
+          className={`w-full text-left p-2 font-semibold ${
+            position ? "bg-gray-100" : "bg-white"
+          } text-gray-500 hover:text-[var(--dark-bg)] flex items-center justify-between`}
           onClick={() => setPosition(!position)}
         />
         {position && (
@@ -130,9 +130,9 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
           text={"Salary"}
           iconPosition={"right"}
           icon={salary ? <FaCaretDown size={20} /> : <FaCaretRight size={20} />}
-          className={
-            "w-full text-left p-2 font-semibold text-gray-500 hover:text-[var(--dark-bg)] flex items-center justify-between transition-all delay-200"
-          }
+          className={`w-full text-left p-2 font-semibold ${
+            salary ? "bg-gray-100" : "bg-white"
+          } text-gray-500 hover:text-[var(--dark-bg)] flex items-center justify-between`}
           onClick={() => setSalary(!salary)}
         />
         {salary && (
@@ -158,9 +158,9 @@ const AsideBar = ({ className, isOpen, setIsOpen }) => {
           text={"City"}
           iconPosition={"right"}
           icon={city ? <FaCaretDown size={20} /> : <FaCaretRight size={20} />}
-          className={
-            "w-full text-left p-2 font-semibold text-gray-500 hover:text-[var(--dark-bg)] flex items-center justify-between transition-all delay-200"
-          }
+          className={`w-full text-left p-2 font-semibold ${
+            city ? "bg-gray-100" : "bg-white"
+          } text-gray-500 hover:text-[var(--dark-bg)] flex items-center justify-between`}
           onClick={() => setCity(!city)}
         />
         {city && (

@@ -168,7 +168,7 @@ const Jobs = () => {
       <div className="w-full min-h-screen flex items-center">
         {/* aside search bar for jobs */}
         <AsideBar
-          className={`hidden md:block ${isOpen ? "w-1/4" : "w-[70px]"} overflow-auto hide-scrollbar !shadow-lg !pt-20 !py-8 h-screen`}
+          className={`hidden md:block ${isOpen ? "w-1/4" : "w-[40px]"} overflow-auto hide-scrollbar !shadow-lg !pt-20 !py-8 h-screen`}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
         />
