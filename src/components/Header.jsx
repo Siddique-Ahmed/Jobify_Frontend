@@ -57,7 +57,7 @@ const Header = () => {
   const [showDropDown, setShowDropDown] = useState(false);
   const auth = true;
   return (
-    <div className="!w-full z-50 min-h-[50px] bg-gray-100 py-3 shadow-md fixed top-0 left-0">
+    <div className="!w-full z-[9999] min-h-[50px] bg-gray-100 py-3 shadow-md fixed top-0 left-0">
       <div className="container mx-auto h-full flex items-center gap-2 justify-between px-3 sm:px-10 relative">
         {/* hamburger */}
 
