@@ -80,7 +80,7 @@ const App = () => {
           path="/apply-form/:id"
           element={
             <ProtectedRoute>
-              <JobApplyForm />
+              <JobApplyForm  />
             </ProtectedRoute>
           }
         />

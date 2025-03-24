@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../global/Button";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
-import { FaXmark } from "react-icons/fa6";
+import { FaBuilding, FaXmark } from "react-icons/fa6";
 import { IoHome, IoSettings } from "react-icons/io5";
 import { FaBriefcase } from "react-icons/fa";
 import CustomAvatar from "../global/Avatar";
@@ -33,6 +33,18 @@ const navigationLinks = [
     link: "/faqs",
   },
 ];
+const AdminNavigationLinks = [
+  {
+    title: "Company",
+    icon: <FaBuilding size={15} />,
+    link: "/admin/company",
+  },
+  {
+    title: "Jobs",
+    icon: <FaBriefcase size={15} />,
+    link: "/admin/jobs",
+  },
+];
 
 const userProfileDropDown = [
   {
@@ -46,13 +58,25 @@ const userProfileDropDown = [
     text: "Applied Jobs",
   },
 ];
+const adminProfileDropDown = [
+  {
+    icon: <FaUser size={17} />,
+    link: "/admin/company-profile",
+    text: "Company Profile",
+  },
+  {
+    icon: <FaBriefcase size={17} />,
+    link: "/admin/applicants",
+    text: "Applicants",
+  },
+];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showDropDown, setShowDropDown] = useState(false);
   const auth = {
     name: "siddique",
-    role: "student",
+    role: "recruiter",
   };
   return (
     <div className="!w-full z-[9999] min-h-[50px] bg-gray-100 py-3 shadow-md fixed top-0 left-0">
@@ -80,20 +104,37 @@ const Header = () => {
         </div>
         {/* for navigations links and login */}
         <div className="flex items-center gap-4">
-          <ul className="hidden md:flex items-center m-0 gap-3">
-            {navigationLinks.map((items, ind) => (
-              <li key={ind}>
-                <Link
-                  to={items.link}
-                  className="font-semibold !no-underline text-black hover:!text-[var(--dark-bg)]"
-                >
-                  <span>{items.title}</span>
-                </Link>
-              </li>
-            ))}
+          <ul className={`${auth.role === "recruiter" ? "hidden": "hidden md:flex"} items-center m-0 gap-3`}>
+            {auth && auth.role == "recruiter" ? (
+              <>
+                {AdminNavigationLinks.map((items, ind) => (
+                  <li key={ind}>
+                    <Link
+                      to={items.link}
+                      className="font-semibold !no-underline text-black hover:!text-[var(--dark-bg)]"
+                    >
+                      <span>{items.title}</span>
+                    </Link>
+                  </li>
+                ))}
+              </>
+            ) : (
+              <>
+                {navigationLinks.map((items, ind) => (
+                  <li key={ind}>
+                    <Link
+                      to={items.link}
+                      className="font-semibold !no-underline text-black hover:!text-[var(--dark-bg)]"
+                    >
+                      <span>{items.title}</span>
+                    </Link>
+                  </li>
+                ))}
+              </>
+            )}
           </ul>
 
-          {auth && auth.role === "student" ? (
+          {auth ? (
             /* if User is login so he see his profile */
             <div className="relative">
               {/* avatar div */}
@@ -115,24 +156,49 @@ const Header = () => {
                   }
                 >
                   <ul className="flex flex-col gap-2 !pl-0">
-                    {userProfileDropDown.map((items, ind) => (
-                      <li
-                        key={ind}
-                        className="hover:bg-gray-200 !hover:text-[var(--dark-bg)]"
-                      >
-                        <Link
-                          to={items.link}
-                          className="!flex !no-underline hover:!text-[var(--dark-bg)] text-black !items-center gap-2 p-2 "
-                        >
-                          <span>{items.icon}</span>
-                          {items.text && (
-                            <p className="text-[14px] mb-0 font-semibold">
-                              {items.text}
-                            </p>
-                          )}
-                        </Link>
-                      </li>
-                    ))}
+                    {auth && auth.role === "recruiter" ? (
+                      <>
+                        {adminProfileDropDown.map((items, ind) => (
+                          <li
+                            key={ind}
+                            className="hover:bg-gray-200 !hover:text-[var(--dark-bg)]"
+                          >
+                            <Link
+                              to={items.link}
+                              className="!flex !no-underline hover:!text-[var(--dark-bg)] text-black !items-center gap-2 p-2 "
+                            >
+                              <span>{items.icon}</span>
+                              {items.text && (
+                                <p className="!text-[14px] mb-0 font-semibold">
+                                  {items.text}
+                                </p>
+                              )}
+                            </Link>
+                          </li>
+                        ))}
+                      </>
+                    ) : (
+                      <>
+                        {userProfileDropDown.map((items, ind) => (
+                          <li
+                            key={ind}
+                            className="hover:bg-gray-200 !hover:text-[var(--dark-bg)]"
+                          >
+                            <Link
+                              to={items.link}
+                              className="!flex !no-underline hover:!text-[var(--dark-bg)] text-black !items-center gap-2 p-2 "
+                            >
+                              <span>{items.icon}</span>
+                              {items.text && (
+                                <p className="text-[14px] mb-0 font-semibold">
+                                  {items.text}
+                                </p>
+                              )}
+                            </Link>
+                          </li>
+                        ))}
+                      </>
+                    )}
                   </ul>
                   <Button
                     text={"Logout"}
@@ -198,17 +264,35 @@ const Header = () => {
               )}
             </div>
             <ul className="flex !pl-0 flex-col mt-4 md:hidden gap-2">
-              {navigationLinks.map((items, ind) => (
-                <li key={ind}>
-                  <Link
-                    to={items.link}
-                    className="font-semibold !no-underline text-black hover:bg-gray-300 p-2 rounded-md flex items-center gap-2 hover:!text-[var(--dark-bg)]"
-                  >
-                    <span>{items.icon}</span>
-                    <span>{items.title}</span>
-                  </Link>
-                </li>
-              ))}
+              {auth && auth.role === "recruiter" ? (
+                <>
+                  {AdminNavigationLinks.map((items, ind) => (
+                    <li key={ind}>
+                      <Link
+                        to={items.link}
+                        className="font-semibold !no-underline text-black hover:bg-gray-300 p-2 rounded-md flex items-center gap-2 hover:!text-[var(--dark-bg)]"
+                      >
+                        <span>{items.icon}</span>
+                        <span>{items.title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </>
+              ) : (
+                <>
+                  {navigationLinks.map((items, ind) => (
+                    <li key={ind}>
+                      <Link
+                        to={items.link}
+                        className="font-semibold !no-underline text-black hover:bg-gray-300 p-2 rounded-md flex items-center gap-2 hover:!text-[var(--dark-bg)]"
+                      >
+                        <span>{items.icon}</span>
+                        <span>{items.title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </>
+              )}
             </ul>
           </div>
         )}
