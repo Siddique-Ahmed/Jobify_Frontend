@@ -33,18 +33,6 @@ const navigationLinks = [
     link: "/faqs",
   },
 ];
-const AdminNavigationLinks = [
-  {
-    title: "Company",
-    icon: <FaBuilding size={15} />,
-    link: "/admin/company",
-  },
-  {
-    title: "Jobs",
-    icon: <FaBriefcase size={15} />,
-    link: "/admin/jobs",
-  },
-];
 
 const userProfileDropDown = [
   {
@@ -59,11 +47,6 @@ const userProfileDropDown = [
   },
 ];
 const adminProfileDropDown = [
-  {
-    icon: <FaUser size={17} />,
-    link: "/admin/company-profile",
-    text: "Company Profile",
-  },
   {
     icon: <FaBriefcase size={17} />,
     link: "/admin/applicants",
@@ -85,14 +68,18 @@ const Header = () => {
 
         {/* for logo */}
         <div className="flex items-center gap-3">
-          {!isOpen && (
-            <Button
-              className="flex md:hidden items-center justify-center"
-              icon={<HiMiniBars3BottomLeft size={23} />}
-              iconPosition={"left"}
-              isIcon={true}
-              onClick={() => setIsOpen(!false)}
-            />
+          {auth && auth.role === "student" && (
+            <>
+              {!isOpen && (
+                <Button
+                  className="flex md:hidden items-center justify-center"
+                  icon={<HiMiniBars3BottomLeft size={23} />}
+                  iconPosition={"left"}
+                  isIcon={true}
+                  onClick={() => setIsOpen(!false)}
+                />
+              )}
+            </>
           )}
           <Link
             to={"/"}
@@ -104,34 +91,21 @@ const Header = () => {
         </div>
         {/* for navigations links and login */}
         <div className="flex items-center gap-4">
-          <ul className={`${auth.role === "recruiter" ? "hidden": "hidden md:flex"} items-center m-0 gap-3`}>
-            {auth && auth.role == "recruiter" ? (
-              <>
-                {AdminNavigationLinks.map((items, ind) => (
-                  <li key={ind}>
-                    <Link
-                      to={items.link}
-                      className="font-semibold !no-underline text-black hover:!text-[var(--dark-bg)]"
-                    >
-                      <span>{items.title}</span>
-                    </Link>
-                  </li>
-                ))}
-              </>
-            ) : (
-              <>
-                {navigationLinks.map((items, ind) => (
-                  <li key={ind}>
-                    <Link
-                      to={items.link}
-                      className="font-semibold !no-underline text-black hover:!text-[var(--dark-bg)]"
-                    >
-                      <span>{items.title}</span>
-                    </Link>
-                  </li>
-                ))}
-              </>
-            )}
+          <ul
+            className={`${
+              auth.role === "recruiter" ? "hidden" : "hidden md:flex"
+            } items-center m-0 gap-3`}
+          >
+            {navigationLinks.map((items, ind) => (
+              <li key={ind}>
+                <Link
+                  to={items.link}
+                  className="font-semibold !no-underline text-black hover:!text-[var(--dark-bg)]"
+                >
+                  <span>{items.title}</span>
+                </Link>
+              </li>
+            ))}
           </ul>
 
           {auth ? (
@@ -264,35 +238,17 @@ const Header = () => {
               )}
             </div>
             <ul className="flex !pl-0 flex-col mt-4 md:hidden gap-2">
-              {auth && auth.role === "recruiter" ? (
-                <>
-                  {AdminNavigationLinks.map((items, ind) => (
-                    <li key={ind}>
-                      <Link
-                        to={items.link}
-                        className="font-semibold !no-underline text-black hover:bg-gray-300 p-2 rounded-md flex items-center gap-2 hover:!text-[var(--dark-bg)]"
-                      >
-                        <span>{items.icon}</span>
-                        <span>{items.title}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </>
-              ) : (
-                <>
-                  {navigationLinks.map((items, ind) => (
-                    <li key={ind}>
-                      <Link
-                        to={items.link}
-                        className="font-semibold !no-underline text-black hover:bg-gray-300 p-2 rounded-md flex items-center gap-2 hover:!text-[var(--dark-bg)]"
-                      >
-                        <span>{items.icon}</span>
-                        <span>{items.title}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </>
-              )}
+              {navigationLinks.map((items, ind) => (
+                <li key={ind}>
+                  <Link
+                    to={items.link}
+                    className="font-semibold !no-underline text-black hover:bg-gray-300 p-2 rounded-md flex items-center gap-2 hover:!text-[var(--dark-bg)]"
+                  >
+                    <span>{items.icon}</span>
+                    <span>{items.title}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         )}

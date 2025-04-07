@@ -42,7 +42,7 @@ const Testimonial = () => {
       <h1 className="font-semibold text-4xl text-[var(--dark-bg)]">
         Testimonials
       </h1>
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-5 overflow-auto">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-2 overflow-auto">
         {userDetail.map((detail, ind) => (
           <TestimonialCard
             key={ind}
