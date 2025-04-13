@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Button from "../../global/Button";
-import { FaBars, FaXmark } from "react-icons/fa6";
+import { FaBars, FaBriefcase, FaXmark } from "react-icons/fa6";
 import HighlightText from "../../global/HighlightText";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { FaBuilding } from "react-icons/fa";
 
 const AsideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const {pathname} = useLocation();  
   return (
     <div
       className={`absolute left-0 top-0 md:sticky bg-white min-h-screen pt-19 ${
@@ -33,12 +35,22 @@ const AsideBar = () => {
             </h1>
           </div>
           <div className="w-full">
-            <ul>
-              <li>
-                <Link className="/dashboard/company">Company</Link>
+            <ul className="w-full mb-0 !pl-0 flex flex-col gap-2">
+              <li className={`${pathname === "/dashboard/company" && "!bg-gray-100"} p-2`}>
+                <Link
+                  to="/dashboard/company"
+                  className="!no-underline flex items-center gap-2 !text-gray-700 hover:!text-[var(--dark-bg)]"
+                >
+                  <FaBuilding /> Company
+                </Link>
               </li>
-              <li>
-                <Link className="/dashboard/jobs">Jobs</Link>
+              <li className={`${pathname === "/dashboard/company/jobs" && "!bg-gray-100"} p-2`}>
+                <Link
+                  to="/dashboard/company/jobs"
+                  className="!no-underline flex items-center gap-2 !text-gray-700 hover:!text-[var(--dark-bg)]"
+                >
+                  <FaBriefcase /> Jobs
+                </Link>
               </li>
             </ul>
           </div>
