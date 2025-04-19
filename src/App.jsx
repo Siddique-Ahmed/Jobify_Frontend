@@ -19,6 +19,9 @@ import ResetPassword from "./pages/authPages/ResetPassword";
 import JobDetail from "./pages/JobDetail";
 import JobApplyForm from "./pages/JobApplyForm";
 import Dashboard from "./pages/admin_pages/Dashboard";
+import Company from "./pages/admin_pages/Company";
+import AdminJobs from "./pages/admin_pages/Jobs";
+import Applicants from "./pages/Applicants";
 
 const App = () => {
   return (
@@ -46,9 +49,10 @@ const App = () => {
         {/* admin route */}
 
         <Route path="/dashboard/company" element={<Dashboard />}>
-          <Route index element={<h1>Company Section</h1>} />
-          <Route path="jobs" element={<h1>Jobs Section</h1>} />
+          <Route index element={<Company />} />
+          <Route path="jobs" element={<AdminJobs />} />
         </Route>
+        <Route path="/jobs/applicants" element={<Applicants />} />
       </Routes>
     </BrowserRouter>
   );

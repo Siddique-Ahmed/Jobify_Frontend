@@ -49,7 +49,7 @@ const userProfileDropDown = [
 const adminProfileDropDown = [
   {
     icon: <FaBriefcase size={17} />,
-    link: "/admin/applicants",
+    link: "/jobs/applicants",
     text: "Applicants",
   },
 ];
