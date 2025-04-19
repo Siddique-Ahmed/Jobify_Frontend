@@ -1,9 +1,10 @@
 import React from 'react'
+import CompanyTable from '../../components/admin/CompanyTable'
 
 const Company = () => {
   return (
     <div>
-      Company Section Component
+      <CompanyTable/>
     </div>
   )
 }

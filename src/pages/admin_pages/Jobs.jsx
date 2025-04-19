@@ -1,9 +1,10 @@
 import React from 'react'
+import JobTable from '../../components/admin/JobTable'
 
 const AdminJobs = () => {
   return (
     <div>
-      Jobs Secion Component
+      <JobTable/>
     </div>
   )
 }
